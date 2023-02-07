@@ -10,7 +10,7 @@ class EnanaTest extends TestCase {
         #Se tendrá que probar que la vida es mayor que 0 y además que su situación es viva
         $enana = new Enana("EnanaMuff", 100, "viva");
         $this->assertEquals(90, $enana->heridaLeve());
-        $this->assertEquals("vida", $enana->situacion);
+        $this->assertEquals("viva", $enana->situacion);
     }
 
     public function testHeridaLeveMuere() {
@@ -42,7 +42,7 @@ class EnanaTest extends TestCase {
         #Se probará el efecto de administrar una pócima Extra a una Enana en el limbo.
         #Se tendrá que probar que la vida es 50 y la situación ha cambiado a viva.
         $enana = new Enana("EnanaMuff", (0), "limbo");
-        $this->assertEquals((50), $enana->pocima());
+        $this->assertEquals((50), $enana->pocimaExtra());
         $this->assertEquals("viva", $enana->situacion);
     }
 }
